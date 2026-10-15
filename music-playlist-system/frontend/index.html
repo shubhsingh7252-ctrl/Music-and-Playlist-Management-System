@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Music &amp; Playlist Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="auth"><div class="box"><h1>♫ Music &amp; Playlist<br>Management System</h1><p class="mu" id="am">Login to your library</p>
+<input id="u" placeholder="Username" autocomplete="username"><input id="e" placeholder="Email" type="email" style="display:none"><input id="pw" type="password" placeholder="Password" autocomplete="current-password">
+<p id="err" style="color:#ff6b6b;min-height:18px;margin:4px 0"></p>
+<button class="btn" style="width:100%" id="go">Login</button>
+<p class="mu" style="text-align:center"><a href="#" id="sw" class="c">New here? Register</a></p>
+<p class="tag">Tip: pehla registered user automatically Admin banta hai.</p></div></div>
+
+<div id="app" hidden>
+<nav><div class="logo">♫ MusicMS</div>
+<button data-v="lib" class="on">🎵 Library</button><button data-v="pls">📃 Playlists</button><button data-v="q">⏭ Queue</button><button data-v="hist">🕘 History</button><button data-v="adm" id="admb">🛠 Admin</button><button data-v="set">⚙ Profile</button>
+<button id="lo" style="margin-top:auto">⎋ Logout</button></nav>
+<main id="main"></main>
+<div id="bar"><div class="info"><div class="t" id="nt">Nothing playing</div><div class="tag" id="na">—</div></div>
+<div class="mid"><button class="ghost" id="pv">⏮</button><button class="pb" id="pp">▶</button><button class="ghost" id="nx">⏭</button>
+<span class="tag" id="cu">0:00</span><input type="range" id="seek" min="0" max="100" value="0"><span class="tag" id="du">0:00</span></div>
+<span class="hm">🔊</span><input type="range" class="hm" id="vol" min="0" max="1" step=".05" value=".8">
+<button class="ghost hm" id="eq" title="Bass boost">EQ</button></div>
+</div>
+<dialog id="dlg"></dialog><audio id="au" preload="none"></audio><div id="toast" hidden></div>
+<script src="js/app.js"></script>
+</body></html>
